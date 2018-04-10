@@ -1,0 +1,8 @@
+author:
+  id: ${random.value}
+  name: xiaoxiaohei
+  site: www.xiaoxiaohei.top
+  desc: ${author.name} - ${author.site}
+
+server:
+  port: 8081
