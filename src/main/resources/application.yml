@@ -25,3 +25,41 @@ spring:
         max-idle: 8
         min-idle: 0
     timeout: 5000
+  data:
+    mongodb:
+      uri: mongodb://root:root@119.29.105.15:27017/test
+      option:
+        min-connection-per-host: 0
+        max-connection-per-host: 100
+        threads-allowed-to-block-for-connection-multiplier: 5
+        server-selection-timeout: 30000
+        max-wait-time: 120000
+        max-connection-idle-time: 0
+        max-connection-life-time: 0
+        connect-timeout: 10000
+        socket-timeout: 0
+        socket-keep-alive: false
+        ssl-enabled: false
+        ssl-invalid-host-name-allowed: false
+        always-use-m-beans: false
+        heartbeat-socket-timeout: 20000
+        heartbeat-connect-timeout: 20000
+        min-heartbeat-frequency: 500
+        heartbeat-frequency: 10000
+        local-threshold: 15
+  datasource:
+    url: jdbc:mysql://119.29.105.15:3306/test
+    username: root
+    password: '%Om2mnlT'
+    driver-class-name: com.mysql.jdbc.Driver
+  output:
+    ansi:
+      enabled: detect
+debug: true
+logging:
+  file: web.log
+  path: D:\logs
+  level:
+    root: WARN
+    com:
+      xxh: DEBUG
