@@ -55,6 +55,12 @@ spring:
   output:
     ansi:
       enabled: detect
+  cache:
+    ehcache:
+      config: classpath:ehcache.xml
+  aop:
+    auto: true
+    proxy-target-class: false
 debug: true
 logging:
   file: web.log

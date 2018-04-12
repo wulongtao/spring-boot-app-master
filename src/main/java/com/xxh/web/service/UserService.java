@@ -12,4 +12,6 @@ public interface UserService {
     User findByName();
 
     List<User> findAllUsers();
+
+    User testEhcache();
 }

@@ -105,8 +105,13 @@ public class HelloController {
         return userService.findByName();
     }
 
-    @RequestMapping("/ehCacheTest")
-    public List<com.xxh.web.mapper.dao.User> ehCacheTest() {
+    @RequestMapping("/defaultCacheTest")
+    public List<com.xxh.web.mapper.dao.User> defaultCacheTest() {
         return userService.findAllUsers();
+    }
+
+    @RequestMapping("/ehcacheTest")
+    public com.xxh.web.mapper.dao.User ehcacheTest() {
+        return userService.testEhcache();
     }
 }
