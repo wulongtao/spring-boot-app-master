@@ -97,6 +97,7 @@ public class HelloController {
     public List<com.xxh.web.repository.dao.User> mongoDel() {
         com.xxh.web.repository.dao.User u = userRepository.findByUsername("mama");
         userRepository.delete(u);
+
         return userRepository.findAll();
     }
 
