@@ -16,8 +16,8 @@ import java.util.Arrays;
  * @author wulongtao
  * @date 2018/4/12
  */
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class WebLogAspect {
     private Logger logger = LoggerFactory.getLogger(getClass());
 
