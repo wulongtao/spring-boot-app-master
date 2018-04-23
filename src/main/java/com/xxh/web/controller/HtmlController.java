@@ -17,4 +17,10 @@ public class HtmlController {
         map.addAttribute("host", "http://www.xiaoxiaohei.top");
         return "index";
     }
+
+    @RequestMapping("/testUpload")
+    public String testUpload() {
+        System.out.println(System.getProperty("app.root"));
+        return "testUpload";
+    }
 }
