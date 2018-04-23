@@ -1,6 +1,8 @@
 package com.xxh.web.handler;
 
 import com.xxh.web.bean.ErrorInfo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -16,11 +18,14 @@ import javax.servlet.http.HttpServletRequest;
  */
 @ControllerAdvice
 public class GlobalExceptionHandler {
+    private Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
     private static final String DEFAULT_ERROR_VIEW = "error";
 
     @ExceptionHandler(value = Exception.class)
     public ModelAndView defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
+        System.out.println("error===" + e.getMessage());
         e.printStackTrace();
+        logger.info("error", e.getMessage());
         ModelAndView mav = new ModelAndView();
         mav.addObject("exception", e);
         mav.addObject("url", e);
@@ -28,7 +33,7 @@ public class GlobalExceptionHandler {
         return mav;
     }
 
-    @ExceptionHandler(value = MyException.class)
+//    @ExceptionHandler(value = MyException.class)
     @ResponseBody
     public ErrorInfo<String> jsonErrorHandler(HttpServletRequest req, MyException e) throws Exception {
         ErrorInfo<String> r = new ErrorInfo<>();

@@ -24,9 +24,9 @@ public class UserServiceImpl implements UserService {
     @Transactional
     @Override
     public User findByName() {
-        int id = userMapper.insert("AAA", 20);
-//        User u = userMapper.findByName("AAA");
-        User u = userMapper.findById(id);
+//        int id = userMapper.insert("AAA", 20);
+        User u = userMapper.findByName("CCC");
+//        User u = userMapper.findById(id);
         return u;
     }
 
