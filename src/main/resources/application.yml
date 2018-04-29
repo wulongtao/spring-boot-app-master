@@ -83,6 +83,10 @@ spring:
   aop:
     auto: true
     proxy-target-class: false
+  messages:
+    basename: i18n/messages
+    cache-duration: 3600
+    encoding: UTF-8
 debug: true
 logging:
   file: web.log

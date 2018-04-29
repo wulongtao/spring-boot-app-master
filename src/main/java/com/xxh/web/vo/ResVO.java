@@ -1,15 +1,20 @@
 package com.xxh.web.vo;
 
+import com.xxh.web.component.LocaleMessageSourceComponent;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.Resource;
+import java.util.Objects;
 
 /**
  * @author 小小黑
  */
-@Component
-public class ResVO {
+public class ResVO<T> {
+
     private Integer result;
     private String message;
-    private Object data;
+    private T data;
 
     public ResVO() {
     }
@@ -19,7 +24,7 @@ public class ResVO {
         this.message = message;
     }
 
-    public ResVO(Integer result, String message, Object data) {
+    public ResVO(Integer result, String message, T data) {
         this.result = result;
         this.message = message;
         this.data = data;
@@ -45,7 +50,7 @@ public class ResVO {
         return data;
     }
 
-    public void setData(Object data) {
+    public void setData(T data) {
         this.data = data;
     }
 
