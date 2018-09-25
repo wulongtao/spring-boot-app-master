@@ -21,7 +21,7 @@ import java.util.Map;
 /**
  * @author 小小黑
  */
-//@Controller
+@Controller
 public class ErrorController extends AbstractErrorController {
     private static final String ERROR_PATH = "/ERROR";
     private static final String JSON_SUFFIX = ".json";

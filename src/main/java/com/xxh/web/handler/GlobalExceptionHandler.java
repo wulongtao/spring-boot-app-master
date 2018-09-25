@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author wulongtao
  * @date 2018/4/10
  */
-@ControllerAdvice
+//@ControllerAdvice
 public class GlobalExceptionHandler {
     private Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
     private static final String DEFAULT_ERROR_VIEW = "error";
@@ -25,6 +25,7 @@ public class GlobalExceptionHandler {
     public ModelAndView defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
         System.out.println("error===" + e.getMessage());
         e.printStackTrace();
+
         logger.info("error", e.getMessage());
         ModelAndView mav = new ModelAndView();
         mav.addObject("exception", e);

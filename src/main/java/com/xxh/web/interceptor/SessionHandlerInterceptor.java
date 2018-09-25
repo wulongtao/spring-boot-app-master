@@ -13,6 +13,7 @@ public class SessionHandlerInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         System.out.println("preHandle");
+
         return true;
     }
 
