@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<filters method="makeAction" params-type="java.lang.String,java.lang.Integer" result-type="java.util.HashMap">
+    <filter>com.xxh.web.filter.AMethodFilter</filter>
+    <filter>com.xxh.web.filter.BMethodFilter</filter>
+</filters>

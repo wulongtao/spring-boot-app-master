@@ -1,6 +1,8 @@
 package com.xxh.web.controller;
 
+import com.xiaoxiaohei.example.ExampleService;
 import com.xxh.web.bean.ErrorInfo;
+import com.xxh.web.filter.TestBean;
 import com.xxh.web.handler.MyException;
 import com.xxh.web.mapper.UserMapper;
 import com.xxh.web.redis.User;
@@ -40,6 +42,21 @@ public class HelloController {
     private UserRepository userRepository;
     @Autowired
     private UserService userService;
+    @Autowired
+    private ExampleService exampleService;
+    @Autowired
+    private TestBean testBean;
+
+    @RequestMapping("/example2")
+    public String example2() {
+
+        return testBean.toString();
+    }
+
+    @RequestMapping("/example")
+    public String example(String word) {
+        return exampleService.wrap(word);
+    }
 
     @RequestMapping("/say")
     public String say() {

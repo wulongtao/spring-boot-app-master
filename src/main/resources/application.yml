@@ -95,3 +95,10 @@ logging:
     root: WARN
     com:
       xxh: DEBUG
+
+example:
+  service:
+    enabled: true
+    prefix: '####'
+    suffix: '@@@@'
+jasypt.encryptor.password: 123456
